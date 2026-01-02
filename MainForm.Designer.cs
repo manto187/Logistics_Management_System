@@ -28,249 +28,323 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
-        this.pnlSidebar = new System.Windows.Forms.Panel();
-        this.pnlLogo = new System.Windows.Forms.Panel();
-        this.lblTitle = new System.Windows.Forms.Label();
-        this.btnManageDrivers = new System.Windows.Forms.Button();
-        this.btnManageVehicles = new System.Windows.Forms.Button();
-        this.btnManageRoutes = new System.Windows.Forms.Button();
-        this.btnManageShipments = new System.Windows.Forms.Button();
-        this.btnManageWarehouses = new System.Windows.Forms.Button();
-        this.btnManageTrips = new System.Windows.Forms.Button();
-        this.btnManageShipmentItems = new System.Windows.Forms.Button();
-        this.btnManageInventory = new System.Windows.Forms.Button();
-        this.btnManageDriverVehicle = new System.Windows.Forms.Button();
-        this.tabControlMain = new System.Windows.Forms.TabControl();
-        this.pnlSidebar.SuspendLayout();
-        this.pnlLogo.SuspendLayout();
-
-        this.SuspendLayout();
+        pnlSidebar = new Panel();
+        btnEmergencyAlert = new Button();
+        btnManageDriverVehicle = new Button();
+        btnManageInventory = new Button();
+        btnManageShipmentItems = new Button();
+        btnManageTrips = new Button();
+        btnManageWarehouses = new Button();
+        btnManageShipments = new Button();
+        btnManageRoutes = new Button();
+        btnManageVehicles = new Button();
+        btnManageDrivers = new Button();
+        pnlLogo = new Panel();
+        lblTitle = new Label();
+        tabControlMain = new TabControl();
+        tabPageHome = new TabPage();
+        pnlHomeHero = new Panel();
+        lblHomeHeading = new Label();
+        lblSubHeading = new Label();
+        pnlSidebar.SuspendLayout();
+        pnlLogo.SuspendLayout();
+        SuspendLayout();
         // 
         // pnlSidebar
         // 
-        this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-        this.pnlSidebar.Controls.Add(this.btnManageDriverVehicle);
-        this.pnlSidebar.Controls.Add(this.btnManageInventory);
-        this.pnlSidebar.Controls.Add(this.btnManageShipmentItems);
-        this.pnlSidebar.Controls.Add(this.btnManageTrips);
-        this.pnlSidebar.Controls.Add(this.btnManageWarehouses);
-        this.pnlSidebar.Controls.Add(this.btnManageShipments);
-        this.pnlSidebar.Controls.Add(this.btnManageRoutes);
-        this.pnlSidebar.Controls.Add(this.btnManageVehicles);
-        this.pnlSidebar.Controls.Add(this.btnManageDrivers);
-        this.pnlSidebar.Controls.Add(this.pnlLogo);
-        this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-        this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
-        this.pnlSidebar.Name = "pnlSidebar";
-        this.pnlSidebar.Size = new System.Drawing.Size(220, 1000);
-        this.pnlSidebar.TabIndex = 10;
+        pnlSidebar.BackColor = Color.FromArgb(51, 51, 76);
+        pnlSidebar.Controls.Add(btnEmergencyAlert);
+        pnlSidebar.Controls.Add(btnManageDriverVehicle);
+        pnlSidebar.Controls.Add(btnManageInventory);
+        pnlSidebar.Controls.Add(btnManageShipmentItems);
+        pnlSidebar.Controls.Add(btnManageTrips);
+        pnlSidebar.Controls.Add(btnManageWarehouses);
+        pnlSidebar.Controls.Add(btnManageShipments);
+        pnlSidebar.Controls.Add(btnManageRoutes);
+        pnlSidebar.Controls.Add(btnManageVehicles);
+        pnlSidebar.Controls.Add(btnManageDrivers);
+        pnlSidebar.Controls.Add(pnlLogo);
+        pnlSidebar.Dock = DockStyle.Left;
+        pnlSidebar.Location = new Point(0, 0);
+        pnlSidebar.Name = "pnlSidebar";
+        pnlSidebar.Size = new Size(220, 1000);
+        pnlSidebar.TabIndex = 10;
         // 
-        // pnlLogo
+        // btnEmergencyAlert
         // 
-        this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-        this.pnlLogo.Controls.Add(this.lblTitle);
-        this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-        this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-        this.pnlLogo.Name = "pnlLogo";
-        this.pnlLogo.Size = new System.Drawing.Size(220, 100);
-        this.pnlLogo.TabIndex = 0;
-        // 
-        // lblTitle
-        // 
-        this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.lblTitle.ForeColor = System.Drawing.Color.White;
-        this.lblTitle.Location = new System.Drawing.Point(0, 0);
-        this.lblTitle.Name = "lblTitle";
-        this.lblTitle.Size = new System.Drawing.Size(220, 100);
-        this.lblTitle.TabIndex = 0;
-        this.lblTitle.Text = "LOGISTIC SYSTEM";
-        this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
-        // btnManageDrivers
-        // 
-        this.btnManageDrivers.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageDrivers.FlatAppearance.BorderSize = 0;
-        this.btnManageDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageDrivers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageDrivers.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageDrivers.Location = new System.Drawing.Point(0, 100);
-        this.btnManageDrivers.Name = "btnManageDrivers";
-        this.btnManageDrivers.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageDrivers.Size = new System.Drawing.Size(220, 60);
-        this.btnManageDrivers.TabIndex = 1;
-        this.btnManageDrivers.Text = "   Drivers";
-        this.btnManageDrivers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageDrivers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageDrivers.UseVisualStyleBackColor = true;
-        this.btnManageDrivers.Click += new System.EventHandler(this.btnManageDrivers_Click);
-        // 
-        // btnManageVehicles
-        // 
-        this.btnManageVehicles.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageVehicles.FlatAppearance.BorderSize = 0;
-        this.btnManageVehicles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageVehicles.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageVehicles.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageVehicles.Location = new System.Drawing.Point(0, 160);
-        this.btnManageVehicles.Name = "btnManageVehicles";
-        this.btnManageVehicles.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageVehicles.Size = new System.Drawing.Size(220, 60);
-        this.btnManageVehicles.TabIndex = 2;
-        this.btnManageVehicles.Text = "   Vehicles";
-        this.btnManageVehicles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageVehicles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageVehicles.UseVisualStyleBackColor = true;
-        this.btnManageVehicles.Click += new System.EventHandler(this.btnManageVehicles_Click);
-        // 
-        // btnManageRoutes
-        // 
-        this.btnManageRoutes.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageRoutes.FlatAppearance.BorderSize = 0;
-        this.btnManageRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageRoutes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageRoutes.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageRoutes.Location = new System.Drawing.Point(0, 220);
-        this.btnManageRoutes.Name = "btnManageRoutes";
-        this.btnManageRoutes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageRoutes.Size = new System.Drawing.Size(220, 60);
-        this.btnManageRoutes.TabIndex = 3;
-        this.btnManageRoutes.Text = "   Routes";
-        this.btnManageRoutes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageRoutes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageRoutes.UseVisualStyleBackColor = true;
-        this.btnManageRoutes.Click += new System.EventHandler(this.btnManageRoutes_Click);
-        // 
-        // btnManageShipments
-        // 
-        this.btnManageShipments.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageShipments.FlatAppearance.BorderSize = 0;
-        this.btnManageShipments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageShipments.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageShipments.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageShipments.Location = new System.Drawing.Point(0, 280);
-        this.btnManageShipments.Name = "btnManageShipments";
-        this.btnManageShipments.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageShipments.Size = new System.Drawing.Size(220, 60);
-        this.btnManageShipments.TabIndex = 4;
-        this.btnManageShipments.Text = "   Shipments";
-        this.btnManageShipments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageShipments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageShipments.UseVisualStyleBackColor = true;
-        this.btnManageShipments.Click += new System.EventHandler(this.btnManageShipments_Click);
-        // 
-        // btnManageWarehouses
-        // 
-        this.btnManageWarehouses.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageWarehouses.FlatAppearance.BorderSize = 0;
-        this.btnManageWarehouses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageWarehouses.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageWarehouses.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageWarehouses.Location = new System.Drawing.Point(0, 340);
-        this.btnManageWarehouses.Name = "btnManageWarehouses";
-        this.btnManageWarehouses.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageWarehouses.Size = new System.Drawing.Size(220, 60);
-        this.btnManageWarehouses.TabIndex = 5;
-        this.btnManageWarehouses.Text = "   Warehouses";
-        this.btnManageWarehouses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageWarehouses.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageWarehouses.UseVisualStyleBackColor = true;
-        this.btnManageWarehouses.Click += new System.EventHandler(this.btnManageWarehouses_Click);
-        // 
-        // btnManageTrips
-        // 
-        this.btnManageTrips.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageTrips.FlatAppearance.BorderSize = 0;
-        this.btnManageTrips.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageTrips.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageTrips.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageTrips.Location = new System.Drawing.Point(0, 400);
-        this.btnManageTrips.Name = "btnManageTrips";
-        this.btnManageTrips.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageTrips.Size = new System.Drawing.Size(220, 60);
-        this.btnManageTrips.TabIndex = 6;
-        this.btnManageTrips.Text = "   Trips";
-        this.btnManageTrips.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageTrips.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageTrips.UseVisualStyleBackColor = true;
-        this.btnManageTrips.Click += new System.EventHandler(this.btnManageTrips_Click);
-        // 
-        // btnManageShipmentItems
-        // 
-        this.btnManageShipmentItems.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageShipmentItems.FlatAppearance.BorderSize = 0;
-        this.btnManageShipmentItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageShipmentItems.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageShipmentItems.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageShipmentItems.Location = new System.Drawing.Point(0, 460);
-        this.btnManageShipmentItems.Name = "btnManageShipmentItems";
-        this.btnManageShipmentItems.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageShipmentItems.Size = new System.Drawing.Size(220, 60);
-        this.btnManageShipmentItems.TabIndex = 7;
-        this.btnManageShipmentItems.Text = "   Shipment Items";
-        this.btnManageShipmentItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageShipmentItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageShipmentItems.UseVisualStyleBackColor = true;
-        this.btnManageShipmentItems.Click += new System.EventHandler(this.btnManageShipmentItems_Click);
-        // 
-        // btnManageInventory
-        // 
-        this.btnManageInventory.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageInventory.FlatAppearance.BorderSize = 0;
-        this.btnManageInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageInventory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageInventory.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageInventory.Location = new System.Drawing.Point(0, 520);
-        this.btnManageInventory.Name = "btnManageInventory";
-        this.btnManageInventory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageInventory.Size = new System.Drawing.Size(220, 60);
-        this.btnManageInventory.TabIndex = 8;
-        this.btnManageInventory.Text = "   Inventory";
-        this.btnManageInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageInventory.UseVisualStyleBackColor = true;
-        this.btnManageInventory.Click += new System.EventHandler(this.btnManageInventory_Click);
+        btnEmergencyAlert.BackColor = Color.FromArgb(255, 82, 82);
+        btnEmergencyAlert.Dock = DockStyle.Top;
+        btnEmergencyAlert.FlatAppearance.BorderSize = 0;
+        btnEmergencyAlert.FlatStyle = FlatStyle.Flat;
+        btnEmergencyAlert.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        btnEmergencyAlert.ForeColor = Color.White;
+        btnEmergencyAlert.Location = new Point(0, 640);
+        btnEmergencyAlert.Name = "btnEmergencyAlert";
+        btnEmergencyAlert.Padding = new Padding(12, 0, 0, 0);
+        btnEmergencyAlert.Size = new Size(220, 60);
+        btnEmergencyAlert.TabIndex = 10;
+        btnEmergencyAlert.Text = "   EMERGENCY!";
+        btnEmergencyAlert.TextAlign = ContentAlignment.MiddleLeft;
+        btnEmergencyAlert.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnEmergencyAlert.UseVisualStyleBackColor = false;
+        btnEmergencyAlert.Click += btnEmergencyAlert_Click;
         // 
         // btnManageDriverVehicle
         // 
-        this.btnManageDriverVehicle.Dock = System.Windows.Forms.DockStyle.Top;
-        this.btnManageDriverVehicle.FlatAppearance.BorderSize = 0;
-        this.btnManageDriverVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnManageDriverVehicle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        this.btnManageDriverVehicle.ForeColor = System.Drawing.Color.Gainsboro;
-        this.btnManageDriverVehicle.Location = new System.Drawing.Point(0, 580);
-        this.btnManageDriverVehicle.Name = "btnManageDriverVehicle";
-        this.btnManageDriverVehicle.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-        this.btnManageDriverVehicle.Size = new System.Drawing.Size(220, 60);
-        this.btnManageDriverVehicle.TabIndex = 9;
-        this.btnManageDriverVehicle.Text = "   Assignments";
-        this.btnManageDriverVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-        this.btnManageDriverVehicle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-        this.btnManageDriverVehicle.UseVisualStyleBackColor = true;
-        this.btnManageDriverVehicle.Click += new System.EventHandler(this.btnManageDriverVehicle_Click);
+        btnManageDriverVehicle.Dock = DockStyle.Top;
+        btnManageDriverVehicle.FlatAppearance.BorderSize = 0;
+        btnManageDriverVehicle.FlatStyle = FlatStyle.Flat;
+        btnManageDriverVehicle.Font = new Font("Segoe UI", 10F);
+        btnManageDriverVehicle.ForeColor = Color.Gainsboro;
+        btnManageDriverVehicle.Location = new Point(0, 580);
+        btnManageDriverVehicle.Name = "btnManageDriverVehicle";
+        btnManageDriverVehicle.Padding = new Padding(12, 0, 0, 0);
+        btnManageDriverVehicle.Size = new Size(220, 60);
+        btnManageDriverVehicle.TabIndex = 9;
+        btnManageDriverVehicle.Text = "   Assignments";
+        btnManageDriverVehicle.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageDriverVehicle.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageDriverVehicle.UseVisualStyleBackColor = true;
+        btnManageDriverVehicle.Click += btnManageDriverVehicle_Click;
+        // 
+        // btnManageInventory
+        // 
+        btnManageInventory.Dock = DockStyle.Top;
+        btnManageInventory.FlatAppearance.BorderSize = 0;
+        btnManageInventory.FlatStyle = FlatStyle.Flat;
+        btnManageInventory.Font = new Font("Segoe UI", 10F);
+        btnManageInventory.ForeColor = Color.Gainsboro;
+        btnManageInventory.Location = new Point(0, 520);
+        btnManageInventory.Name = "btnManageInventory";
+        btnManageInventory.Padding = new Padding(12, 0, 0, 0);
+        btnManageInventory.Size = new Size(220, 60);
+        btnManageInventory.TabIndex = 8;
+        btnManageInventory.Text = "   Inventory";
+        btnManageInventory.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageInventory.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageInventory.UseVisualStyleBackColor = true;
+        btnManageInventory.Click += btnManageInventory_Click;
+        // 
+        // btnManageShipmentItems
+        // 
+        btnManageShipmentItems.Dock = DockStyle.Top;
+        btnManageShipmentItems.FlatAppearance.BorderSize = 0;
+        btnManageShipmentItems.FlatStyle = FlatStyle.Flat;
+        btnManageShipmentItems.Font = new Font("Segoe UI", 10F);
+        btnManageShipmentItems.ForeColor = Color.Gainsboro;
+        btnManageShipmentItems.Location = new Point(0, 460);
+        btnManageShipmentItems.Name = "btnManageShipmentItems";
+        btnManageShipmentItems.Padding = new Padding(12, 0, 0, 0);
+        btnManageShipmentItems.Size = new Size(220, 60);
+        btnManageShipmentItems.TabIndex = 7;
+        btnManageShipmentItems.Text = "   Shipment Items";
+        btnManageShipmentItems.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageShipmentItems.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageShipmentItems.UseVisualStyleBackColor = true;
+        btnManageShipmentItems.Click += btnManageShipmentItems_Click;
+        // 
+        // btnManageTrips
+        // 
+        btnManageTrips.Dock = DockStyle.Top;
+        btnManageTrips.FlatAppearance.BorderSize = 0;
+        btnManageTrips.FlatStyle = FlatStyle.Flat;
+        btnManageTrips.Font = new Font("Segoe UI", 10F);
+        btnManageTrips.ForeColor = Color.Gainsboro;
+        btnManageTrips.Location = new Point(0, 400);
+        btnManageTrips.Name = "btnManageTrips";
+        btnManageTrips.Padding = new Padding(12, 0, 0, 0);
+        btnManageTrips.Size = new Size(220, 60);
+        btnManageTrips.TabIndex = 6;
+        btnManageTrips.Text = "   Trips";
+        btnManageTrips.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageTrips.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageTrips.UseVisualStyleBackColor = true;
+        btnManageTrips.Click += btnManageTrips_Click;
+        // 
+        // btnManageWarehouses
+        // 
+        btnManageWarehouses.Dock = DockStyle.Top;
+        btnManageWarehouses.FlatAppearance.BorderSize = 0;
+        btnManageWarehouses.FlatStyle = FlatStyle.Flat;
+        btnManageWarehouses.Font = new Font("Segoe UI", 10F);
+        btnManageWarehouses.ForeColor = Color.Gainsboro;
+        btnManageWarehouses.Location = new Point(0, 340);
+        btnManageWarehouses.Name = "btnManageWarehouses";
+        btnManageWarehouses.Padding = new Padding(12, 0, 0, 0);
+        btnManageWarehouses.Size = new Size(220, 60);
+        btnManageWarehouses.TabIndex = 5;
+        btnManageWarehouses.Text = "   Warehouses";
+        btnManageWarehouses.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageWarehouses.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageWarehouses.UseVisualStyleBackColor = true;
+        btnManageWarehouses.Click += btnManageWarehouses_Click;
+        // 
+        // btnManageShipments
+        // 
+        btnManageShipments.Dock = DockStyle.Top;
+        btnManageShipments.FlatAppearance.BorderSize = 0;
+        btnManageShipments.FlatStyle = FlatStyle.Flat;
+        btnManageShipments.Font = new Font("Segoe UI", 10F);
+        btnManageShipments.ForeColor = Color.Gainsboro;
+        btnManageShipments.Location = new Point(0, 280);
+        btnManageShipments.Name = "btnManageShipments";
+        btnManageShipments.Padding = new Padding(12, 0, 0, 0);
+        btnManageShipments.Size = new Size(220, 60);
+        btnManageShipments.TabIndex = 4;
+        btnManageShipments.Text = "   Shipments";
+        btnManageShipments.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageShipments.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageShipments.UseVisualStyleBackColor = true;
+        btnManageShipments.Click += btnManageShipments_Click;
+        // 
+        // btnManageRoutes
+        // 
+        btnManageRoutes.Dock = DockStyle.Top;
+        btnManageRoutes.FlatAppearance.BorderSize = 0;
+        btnManageRoutes.FlatStyle = FlatStyle.Flat;
+        btnManageRoutes.Font = new Font("Segoe UI", 10F);
+        btnManageRoutes.ForeColor = Color.Gainsboro;
+        btnManageRoutes.Location = new Point(0, 220);
+        btnManageRoutes.Name = "btnManageRoutes";
+        btnManageRoutes.Padding = new Padding(12, 0, 0, 0);
+        btnManageRoutes.Size = new Size(220, 60);
+        btnManageRoutes.TabIndex = 3;
+        btnManageRoutes.Text = "   Routes";
+        btnManageRoutes.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageRoutes.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageRoutes.UseVisualStyleBackColor = true;
+        btnManageRoutes.Click += btnManageRoutes_Click;
+        // 
+        // btnManageVehicles
+        // 
+        btnManageVehicles.Dock = DockStyle.Top;
+        btnManageVehicles.FlatAppearance.BorderSize = 0;
+        btnManageVehicles.FlatStyle = FlatStyle.Flat;
+        btnManageVehicles.Font = new Font("Segoe UI", 10F);
+        btnManageVehicles.ForeColor = Color.Gainsboro;
+        btnManageVehicles.Location = new Point(0, 160);
+        btnManageVehicles.Name = "btnManageVehicles";
+        btnManageVehicles.Padding = new Padding(12, 0, 0, 0);
+        btnManageVehicles.Size = new Size(220, 60);
+        btnManageVehicles.TabIndex = 2;
+        btnManageVehicles.Text = "   Vehicles";
+        btnManageVehicles.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageVehicles.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageVehicles.UseVisualStyleBackColor = true;
+        btnManageVehicles.Click += btnManageVehicles_Click;
+        // 
+        // btnManageDrivers
+        // 
+        btnManageDrivers.Dock = DockStyle.Top;
+        btnManageDrivers.FlatAppearance.BorderSize = 0;
+        btnManageDrivers.FlatStyle = FlatStyle.Flat;
+        btnManageDrivers.Font = new Font("Segoe UI", 10F);
+        btnManageDrivers.ForeColor = Color.Gainsboro;
+        btnManageDrivers.Location = new Point(0, 100);
+        btnManageDrivers.Name = "btnManageDrivers";
+        btnManageDrivers.Padding = new Padding(12, 0, 0, 0);
+        btnManageDrivers.Size = new Size(220, 60);
+        btnManageDrivers.TabIndex = 1;
+        btnManageDrivers.Text = "   Drivers";
+        btnManageDrivers.TextAlign = ContentAlignment.MiddleLeft;
+        btnManageDrivers.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnManageDrivers.UseVisualStyleBackColor = true;
+        btnManageDrivers.Click += btnManageDrivers_Click;
+        // 
+        // pnlLogo
+        // 
+        pnlLogo.BackColor = Color.FromArgb(39, 39, 58);
+        pnlLogo.Controls.Add(lblTitle);
+        pnlLogo.Dock = DockStyle.Top;
+        pnlLogo.Location = new Point(0, 0);
+        pnlLogo.Name = "pnlLogo";
+        pnlLogo.Size = new Size(220, 100);
+        pnlLogo.TabIndex = 0;
+        // 
+        // lblTitle
+        // 
+        lblTitle.Dock = DockStyle.Fill;
+        lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+        lblTitle.ForeColor = Color.White;
+        lblTitle.Location = new Point(0, 0);
+        lblTitle.Name = "lblTitle";
+        lblTitle.Size = new Size(220, 100);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "LOGISTIC SYSTEM";
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter;
         // 
         // tabControlMain
         // 
-        this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.tabControlMain.Location = new System.Drawing.Point(220, 0);
-        this.tabControlMain.Name = "tabControlMain";
-        this.tabControlMain.SelectedIndex = 0;
-        this.tabControlMain.Size = new System.Drawing.Size(980, 1000);
-        this.tabControlMain.TabIndex = 11;
+        tabControlMain.Controls.Add(tabPageHome);
+        tabControlMain.Dock = DockStyle.Fill;
+        tabControlMain.Location = new Point(220, 0);
+        tabControlMain.Name = "tabControlMain";
+        tabControlMain.SelectedIndex = 0;
+        tabControlMain.Size = new Size(980, 1000);
+        tabControlMain.TabIndex = 11;
+        tabControlMain.SelectedIndexChanged += tabControlMain_SelectedIndexChanged;
+        // 
+        // tabPageHome
+        // 
+        tabPageHome.BackColor = Color.White;
+        tabPageHome.Controls.Add(pnlHomeHero);
+        tabPageHome.Location = new Point(4, 24);
+        tabPageHome.Name = "tabPageHome";
+        tabPageHome.Padding = new Padding(3);
+        tabPageHome.Size = new Size(972, 972);
+        tabPageHome.TabIndex = 0;
+        tabPageHome.Text = "Dashboard";
+        // 
+        // pnlHomeHero
+        // 
+        pnlHomeHero.BackColor = Color.FromArgb(51, 51, 76);
+        pnlHomeHero.Controls.Add(lblSubHeading);
+        pnlHomeHero.Controls.Add(lblHomeHeading);
+        pnlHomeHero.Dock = DockStyle.Fill;
+        pnlHomeHero.Location = new Point(3, 3);
+        pnlHomeHero.Name = "pnlHomeHero";
+        pnlHomeHero.Size = new Size(966, 966);
+        pnlHomeHero.TabIndex = 0;
+        // 
+        // lblHomeHeading
+        // 
+        lblHomeHeading.Anchor = AnchorStyles.None;
+        lblHomeHeading.AutoSize = true;
+        lblHomeHeading.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+        lblHomeHeading.ForeColor = Color.White;
+        lblHomeHeading.Location = new Point(148, 381);
+        lblHomeHeading.Name = "lblHomeHeading";
+        lblHomeHeading.Size = new Size(734, 65);
+        lblHomeHeading.TabIndex = 0;
+        lblHomeHeading.Text = "VEHICLE MANAGEMENT SYSTEM";
+        lblHomeHeading.TextAlign = ContentAlignment.MiddleCenter;
+        // 
+        // lblSubHeading
+        // 
+        lblSubHeading.Anchor = AnchorStyles.None;
+        lblSubHeading.AutoSize = true;
+        lblSubHeading.Font = new Font("Segoe UI", 14F);
+        lblSubHeading.ForeColor = Color.Gainsboro;
+        lblSubHeading.Location = new Point(328, 458);
+        lblSubHeading.Name = "lblSubHeading";
+        lblSubHeading.Size = new Size(367, 25);
+        lblSubHeading.TabIndex = 1;
+        lblSubHeading.Text = "Professional Logistics && Fleet Optimization";
+        lblSubHeading.TextAlign = ContentAlignment.MiddleCenter;
         // 
         // MainForm
         // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(1200, 1000);
-        this.Controls.Add(this.tabControlMain);
-        this.Controls.Add(this.pnlSidebar);
-        this.Name = "MainForm";
-        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-        this.Text = "Logistic Management System - Dashboard";
-        this.pnlSidebar.ResumeLayout(false);
-        this.pnlLogo.ResumeLayout(false);
-        this.ResumeLayout(false);
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(1200, 1000);
+        Controls.Add(tabControlMain);
+        Controls.Add(pnlSidebar);
+        Name = "MainForm";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Logistic Management System - Dashboard";
+        pnlSidebar.ResumeLayout(false);
+        pnlLogo.ResumeLayout(false);
+        ResumeLayout(false);
 
     }
 
@@ -288,6 +362,11 @@ partial class MainForm
     private System.Windows.Forms.Button btnManageShipmentItems;
     private System.Windows.Forms.Button btnManageInventory;
     private System.Windows.Forms.Button btnManageDriverVehicle;
+    private System.Windows.Forms.Button btnEmergencyAlert;
     private System.Windows.Forms.TabControl tabControlMain;
+    private System.Windows.Forms.TabPage tabPageHome;
+    private System.Windows.Forms.Panel pnlHomeHero;
+    private System.Windows.Forms.Label lblHomeHeading;
+    private System.Windows.Forms.Label lblSubHeading;
 
 }

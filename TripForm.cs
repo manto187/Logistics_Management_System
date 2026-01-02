@@ -102,12 +102,12 @@ public partial class TripForm : Form
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvTrips.DataSource = dt;
-                
+
                 // Hide ID columns if desired, but keep them for selection
-                if(dgvTrips.Columns["Driver_id"] != null) dgvTrips.Columns["Driver_id"].Visible = false;
-                if(dgvTrips.Columns["Vehicle_id"] != null) dgvTrips.Columns["Vehicle_id"].Visible = false;
-                if(dgvTrips.Columns["Shipment_id"] != null) dgvTrips.Columns["Shipment_id"].Visible = false;
-                if(dgvTrips.Columns["Route_id"] != null) dgvTrips.Columns["Route_id"].Visible = false;
+                if (dgvTrips.Columns["Driver_id"] != null) dgvTrips.Columns["Driver_id"].Visible = false;
+                if (dgvTrips.Columns["Vehicle_id"] != null) dgvTrips.Columns["Vehicle_id"].Visible = false;
+                if (dgvTrips.Columns["Shipment_id"] != null) dgvTrips.Columns["Shipment_id"].Visible = false;
+                if (dgvTrips.Columns["Route_id"] != null) dgvTrips.Columns["Route_id"].Visible = false;
             }
         }
         catch (Exception ex)
@@ -118,7 +118,7 @@ public partial class TripForm : Form
 
     private void BtnAdd_Click(object? sender, EventArgs e)
     {
-        if (cmbDriver.SelectedIndex == -1 || cmbVehicle.SelectedIndex == -1 || 
+        if (cmbDriver.SelectedIndex == -1 || cmbVehicle.SelectedIndex == -1 ||
             cmbShipment.SelectedIndex == -1 || cmbRoute.SelectedIndex == -1)
         {
             MessageBox.Show("All fields must be selected.");
@@ -255,25 +255,30 @@ public partial class TripForm : Form
         {
             DataGridViewRow row = dgvTrips.Rows[e.RowIndex];
             txtTripId.Text = row.Cells["Trip_id"].Value.ToString();
-            
+
             // Safe casting for combos
             if (row.Cells["Driver_id"].Value != DBNull.Value)
                 cmbDriver.SelectedValue = row.Cells["Driver_id"].Value;
-            
+
             if (row.Cells["Vehicle_id"].Value != DBNull.Value)
                 cmbVehicle.SelectedValue = row.Cells["Vehicle_id"].Value;
-                
+
             if (row.Cells["Shipment_id"].Value != DBNull.Value)
                 cmbShipment.SelectedValue = row.Cells["Shipment_id"].Value;
-                
+
             if (row.Cells["Route_id"].Value != DBNull.Value)
                 cmbRoute.SelectedValue = row.Cells["Route_id"].Value;
 
             if (row.Cells["Start_time"].Value != DBNull.Value)
                 dtpStartTime.Value = Convert.ToDateTime(row.Cells["Start_time"].Value);
-                
+
             if (row.Cells["End_time"].Value != DBNull.Value)
                 dtpEndTime.Value = Convert.ToDateTime(row.Cells["End_time"].Value);
         }
+    }
+
+    private void dgvTrips_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    {
+
     }
 }

@@ -17,6 +17,8 @@ partial class DriverForm
 
     private void InitializeComponent()
     {
+        DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+        DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
         layoutPanelMain = new TableLayoutPanel();
         panelInputs = new Panel();
         grpDriverDetails = new GroupBox();
@@ -74,19 +76,18 @@ partial class DriverForm
         // 
         // grpDriverDetails
         // 
-        this.grpDriverDetails.BackColor = System.Drawing.Color.White;
-        this.grpDriverDetails.Controls.Add(this.tlpInputs);
-        this.grpDriverDetails.Controls.Add(this.flowLayoutPanelButtons);
-        this.grpDriverDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.grpDriverDetails.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.grpDriverDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-        this.grpDriverDetails.Location = new System.Drawing.Point(10, 10);
-        this.grpDriverDetails.Name = "grpDriverDetails";
-        this.grpDriverDetails.Size = new System.Drawing.Size(1222, 497);
-        this.grpDriverDetails.TabIndex = 0;
-        this.grpDriverDetails.TabStop = false;
-        this.grpDriverDetails.Text = "DRIVER REGISTRATION";
-
+        grpDriverDetails.BackColor = Color.White;
+        grpDriverDetails.Controls.Add(tlpInputs);
+        grpDriverDetails.Controls.Add(flowLayoutPanelButtons);
+        grpDriverDetails.Dock = DockStyle.Fill;
+        grpDriverDetails.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        grpDriverDetails.ForeColor = Color.FromArgb(51, 51, 76);
+        grpDriverDetails.Location = new Point(10, 10);
+        grpDriverDetails.Name = "grpDriverDetails";
+        grpDriverDetails.Size = new Size(1222, 497);
+        grpDriverDetails.TabIndex = 0;
+        grpDriverDetails.TabStop = false;
+        grpDriverDetails.Text = "DRIVER REGISTRATION";
         grpDriverDetails.Enter += grpDriverDetails_Enter;
         // 
         // tlpInputs
@@ -107,7 +108,7 @@ partial class DriverForm
         tlpInputs.Controls.Add(lblDate, 0, 5);
         tlpInputs.Controls.Add(dtpCreatedAt, 1, 5);
         tlpInputs.Dock = DockStyle.Top;
-        tlpInputs.Location = new Point(3, 19);
+        tlpInputs.Location = new Point(3, 21);
         tlpInputs.Name = "tlpInputs";
         tlpInputs.RowCount = 6;
         tlpInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -135,7 +136,7 @@ partial class DriverForm
         txtDriverId.Location = new Point(123, 3);
         txtDriverId.Name = "txtDriverId";
         txtDriverId.ReadOnly = true;
-        txtDriverId.Size = new Size(1090, 23);
+        txtDriverId.Size = new Size(1090, 25);
         txtDriverId.TabIndex = 1;
         // 
         // lblName
@@ -152,7 +153,7 @@ partial class DriverForm
         txtName.Dock = DockStyle.Fill;
         txtName.Location = new Point(123, 33);
         txtName.Name = "txtName";
-        txtName.Size = new Size(1090, 23);
+        txtName.Size = new Size(1090, 25);
         txtName.TabIndex = 3;
         // 
         // lblPhone
@@ -169,7 +170,7 @@ partial class DriverForm
         txtPhoneNumber.Dock = DockStyle.Fill;
         txtPhoneNumber.Location = new Point(123, 63);
         txtPhoneNumber.Name = "txtPhoneNumber";
-        txtPhoneNumber.Size = new Size(1090, 23);
+        txtPhoneNumber.Size = new Size(1090, 25);
         txtPhoneNumber.TabIndex = 5;
         // 
         // lblLicense
@@ -186,7 +187,7 @@ partial class DriverForm
         txtLicenseNumber.Dock = DockStyle.Fill;
         txtLicenseNumber.Location = new Point(123, 93);
         txtLicenseNumber.Name = "txtLicenseNumber";
-        txtLicenseNumber.Size = new Size(1090, 23);
+        txtLicenseNumber.Size = new Size(1090, 25);
         txtLicenseNumber.TabIndex = 7;
         // 
         // lblStatus
@@ -205,7 +206,7 @@ partial class DriverForm
         cmbStatus.Items.AddRange(new object[] { "Active", "Inactive", "On Leave" });
         cmbStatus.Location = new Point(123, 123);
         cmbStatus.Name = "cmbStatus";
-        cmbStatus.Size = new Size(1090, 23);
+        cmbStatus.Size = new Size(1090, 25);
         cmbStatus.TabIndex = 9;
         // 
         // lblDate
@@ -222,7 +223,7 @@ partial class DriverForm
         dtpCreatedAt.Dock = DockStyle.Fill;
         dtpCreatedAt.Location = new Point(123, 153);
         dtpCreatedAt.Name = "dtpCreatedAt";
-        dtpCreatedAt.Size = new Size(1090, 23);
+        dtpCreatedAt.Size = new Size(1090, 25);
         dtpCreatedAt.TabIndex = 11;
         // 
         // flowLayoutPanelButtons
@@ -240,85 +241,90 @@ partial class DriverForm
         // 
         // btnAdd
         // 
-        this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-        this.btnAdd.FlatAppearance.BorderSize = 0;
-        this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnAdd.ForeColor = System.Drawing.Color.White;
-        this.btnAdd.Location = new System.Drawing.Point(1113, 3);
-        this.btnAdd.Name = "btnAdd";
-        this.btnAdd.Size = new System.Drawing.Size(100, 30);
-        this.btnAdd.TabIndex = 0;
-        this.btnAdd.Text = "SAVE";
-        this.btnAdd.UseVisualStyleBackColor = false;
+        btnAdd.BackColor = Color.FromArgb(51, 51, 76);
+        btnAdd.FlatAppearance.BorderSize = 0;
+        btnAdd.FlatStyle = FlatStyle.Flat;
+        btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnAdd.ForeColor = Color.White;
+        btnAdd.Location = new Point(1113, 3);
+        btnAdd.Name = "btnAdd";
+        btnAdd.Size = new Size(100, 30);
+        btnAdd.TabIndex = 0;
+        btnAdd.Text = "SAVE";
+        btnAdd.UseVisualStyleBackColor = false;
         // 
         // btnUpdate
         // 
-        this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-        this.btnUpdate.FlatAppearance.BorderSize = 0;
-        this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnUpdate.ForeColor = System.Drawing.Color.White;
-        this.btnUpdate.Location = new System.Drawing.Point(1007, 3);
-        this.btnUpdate.Name = "btnUpdate";
-        this.btnUpdate.Size = new System.Drawing.Size(100, 30);
-        this.btnUpdate.TabIndex = 1;
-        this.btnUpdate.Text = "UPDATE";
-        this.btnUpdate.UseVisualStyleBackColor = false;
+        btnUpdate.BackColor = Color.FromArgb(0, 150, 136);
+        btnUpdate.FlatAppearance.BorderSize = 0;
+        btnUpdate.FlatStyle = FlatStyle.Flat;
+        btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnUpdate.ForeColor = Color.White;
+        btnUpdate.Location = new Point(1007, 3);
+        btnUpdate.Name = "btnUpdate";
+        btnUpdate.Size = new Size(100, 30);
+        btnUpdate.TabIndex = 1;
+        btnUpdate.Text = "UPDATE";
+        btnUpdate.UseVisualStyleBackColor = false;
         // 
         // btnDelete
         // 
-        this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-        this.btnDelete.FlatAppearance.BorderSize = 0;
-        this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnDelete.ForeColor = System.Drawing.Color.White;
-        this.btnDelete.Location = new System.Drawing.Point(901, 3);
-        this.btnDelete.Name = "btnDelete";
-        this.btnDelete.Size = new System.Drawing.Size(100, 30);
-        this.btnDelete.TabIndex = 2;
-        this.btnDelete.Text = "DELETE";
-        this.btnDelete.UseVisualStyleBackColor = false;
+        btnDelete.BackColor = Color.FromArgb(255, 82, 82);
+        btnDelete.FlatAppearance.BorderSize = 0;
+        btnDelete.FlatStyle = FlatStyle.Flat;
+        btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnDelete.ForeColor = Color.White;
+        btnDelete.Location = new Point(901, 3);
+        btnDelete.Name = "btnDelete";
+        btnDelete.Size = new Size(100, 30);
+        btnDelete.TabIndex = 2;
+        btnDelete.Text = "DELETE";
+        btnDelete.UseVisualStyleBackColor = false;
         // 
         // btnClear
         // 
-        this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-        this.btnClear.FlatAppearance.BorderSize = 0;
-        this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnClear.ForeColor = System.Drawing.Color.White;
-        this.btnClear.Location = new System.Drawing.Point(795, 3);
-        this.btnClear.Name = "btnClear";
-        this.btnClear.Size = new System.Drawing.Size(100, 30);
-        this.btnClear.TabIndex = 3;
-        this.btnClear.Text = "CLEAR";
-        this.btnClear.UseVisualStyleBackColor = false;
-
+        btnClear.BackColor = Color.FromArgb(158, 158, 158);
+        btnClear.FlatAppearance.BorderSize = 0;
+        btnClear.FlatStyle = FlatStyle.Flat;
+        btnClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnClear.ForeColor = Color.White;
+        btnClear.Location = new Point(795, 3);
+        btnClear.Name = "btnClear";
+        btnClear.Size = new Size(100, 30);
+        btnClear.TabIndex = 3;
+        btnClear.Text = "CLEAR";
+        btnClear.UseVisualStyleBackColor = false;
         // 
         // dgvDrivers
         // 
-        this.dgvDrivers.AllowUserToAddRows = false;
-        this.dgvDrivers.AllowUserToDeleteRows = false;
-        this.dgvDrivers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvDrivers.BackgroundColor = System.Drawing.Color.White;
-        this.dgvDrivers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-        this.dgvDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.dgvDrivers.EnableHeadersVisualStyles = false;
-        this.dgvDrivers.Location = new System.Drawing.Point(3, 526);
-        this.dgvDrivers.MultiSelect = false;
-        this.dgvDrivers.Name = "dgvDrivers";
-        this.dgvDrivers.ReadOnly = true;
-        this.dgvDrivers.RowHeadersVisible = false;
-        this.dgvDrivers.RowTemplate.Height = 35;
-        this.dgvDrivers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        this.dgvDrivers.Size = new System.Drawing.Size(1242, 293);
-        this.dgvDrivers.TabIndex = 1;
-        this.dgvDrivers.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(238, 239, 249);
-        this.dgvDrivers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-        this.dgvDrivers.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(51, 51, 76);
-        this.dgvDrivers.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-
+        dgvDrivers.AllowUserToAddRows = false;
+        dgvDrivers.AllowUserToDeleteRows = false;
+        dataGridViewCellStyle1.BackColor = Color.FromArgb(238, 239, 249);
+        dgvDrivers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+        dgvDrivers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvDrivers.BackgroundColor = Color.White;
+        dgvDrivers.BorderStyle = BorderStyle.None;
+        dgvDrivers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+        dgvDrivers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+        dataGridViewCellStyle2.BackColor = SystemColors.Window;
+        dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+        dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+        dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(51, 51, 76);
+        dataGridViewCellStyle2.SelectionForeColor = Color.White;
+        dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+        dgvDrivers.DefaultCellStyle = dataGridViewCellStyle2;
+        dgvDrivers.Dock = DockStyle.Fill;
+        dgvDrivers.EnableHeadersVisualStyles = false;
+        dgvDrivers.Location = new Point(3, 526);
+        dgvDrivers.MultiSelect = false;
+        dgvDrivers.Name = "dgvDrivers";
+        dgvDrivers.ReadOnly = true;
+        dgvDrivers.RowHeadersVisible = false;
+        dgvDrivers.RowTemplate.Height = 35;
+        dgvDrivers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvDrivers.Size = new Size(1242, 293);
+        dgvDrivers.TabIndex = 1;
         // 
         // DriverForm
         // 

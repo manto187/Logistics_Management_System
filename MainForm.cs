@@ -24,11 +24,11 @@ public partial class MainForm : Form
         childForm.TopLevel = false;
         childForm.FormBorderStyle = FormBorderStyle.None;
         childForm.Dock = DockStyle.Fill;
-        
+
         newTab.Controls.Add(childForm);
         tabControlMain.TabPages.Add(newTab);
         tabControlMain.SelectedTab = newTab;
-        
+
         childForm.Show();
     }
 
@@ -75,6 +75,16 @@ public partial class MainForm : Form
     private void btnManageDriverVehicle_Click(object sender, EventArgs e)
     {
         OpenChildForm(new DriverVehicleForm(), "Assignments");
+    }
+
+    private void btnEmergencyAlert_Click(object sender, EventArgs e)
+    {
+        OpenChildForm(new EmergencyAlertForm(), "Emergency");
+    }
+
+    private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }
 

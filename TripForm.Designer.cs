@@ -13,10 +13,12 @@ partial class TripForm
         base.Dispose(disposing);
     }
 
-#region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
     private void InitializeComponent()
     {
+        DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+        DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
         layoutPanelMain = new TableLayoutPanel();
         panelInputs = new Panel();
         grpTripDetails = new GroupBox();
@@ -76,19 +78,18 @@ partial class TripForm
         // 
         // grpTripDetails
         // 
-        this.grpTripDetails.BackColor = System.Drawing.Color.White;
-        this.grpTripDetails.Controls.Add(this.tlpInputs);
-        this.grpTripDetails.Controls.Add(this.flowLayoutPanelButtons);
-        this.grpTripDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.grpTripDetails.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.grpTripDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-        this.grpTripDetails.Location = new System.Drawing.Point(10, 10);
-        this.grpTripDetails.Name = "grpTripDetails";
-        this.grpTripDetails.Size = new Size(774, 294);
-        this.grpTripDetails.TabIndex = 0;
-        this.grpTripDetails.TabStop = false;
-        this.grpTripDetails.Text = "TRIP SCHEDULE";
-
+        grpTripDetails.BackColor = Color.White;
+        grpTripDetails.Controls.Add(tlpInputs);
+        grpTripDetails.Controls.Add(flowLayoutPanelButtons);
+        grpTripDetails.Dock = DockStyle.Fill;
+        grpTripDetails.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        grpTripDetails.ForeColor = Color.FromArgb(51, 51, 76);
+        grpTripDetails.Location = new Point(10, 10);
+        grpTripDetails.Name = "grpTripDetails";
+        grpTripDetails.Size = new Size(774, 294);
+        grpTripDetails.TabIndex = 0;
+        grpTripDetails.TabStop = false;
+        grpTripDetails.Text = "TRIP SCHEDULE";
         // 
         // tlpInputs
         // 
@@ -110,7 +111,7 @@ partial class TripForm
         tlpInputs.Controls.Add(lblEnd, 0, 6);
         tlpInputs.Controls.Add(dtpEndTime, 1, 6);
         tlpInputs.Dock = DockStyle.Top;
-        tlpInputs.Location = new Point(3, 19);
+        tlpInputs.Location = new Point(3, 21);
         tlpInputs.Name = "tlpInputs";
         tlpInputs.RowCount = 7;
         tlpInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -139,7 +140,7 @@ partial class TripForm
         txtTripId.Location = new Point(123, 3);
         txtTripId.Name = "txtTripId";
         txtTripId.ReadOnly = true;
-        txtTripId.Size = new Size(642, 23);
+        txtTripId.Size = new Size(642, 25);
         txtTripId.TabIndex = 1;
         // 
         // lblDriver
@@ -158,7 +159,7 @@ partial class TripForm
         cmbDriver.FormattingEnabled = true;
         cmbDriver.Location = new Point(123, 33);
         cmbDriver.Name = "cmbDriver";
-        cmbDriver.Size = new Size(642, 23);
+        cmbDriver.Size = new Size(642, 25);
         cmbDriver.TabIndex = 3;
         // 
         // lblVehicle
@@ -177,7 +178,7 @@ partial class TripForm
         cmbVehicle.FormattingEnabled = true;
         cmbVehicle.Location = new Point(123, 63);
         cmbVehicle.Name = "cmbVehicle";
-        cmbVehicle.Size = new Size(642, 23);
+        cmbVehicle.Size = new Size(642, 25);
         cmbVehicle.TabIndex = 5;
         // 
         // lblShipment
@@ -196,7 +197,7 @@ partial class TripForm
         cmbShipment.FormattingEnabled = true;
         cmbShipment.Location = new Point(123, 93);
         cmbShipment.Name = "cmbShipment";
-        cmbShipment.Size = new Size(642, 23);
+        cmbShipment.Size = new Size(642, 25);
         cmbShipment.TabIndex = 7;
         // 
         // lblRoute
@@ -215,7 +216,7 @@ partial class TripForm
         cmbRoute.FormattingEnabled = true;
         cmbRoute.Location = new Point(123, 123);
         cmbRoute.Name = "cmbRoute";
-        cmbRoute.Size = new Size(642, 23);
+        cmbRoute.Size = new Size(642, 25);
         cmbRoute.TabIndex = 9;
         // 
         // lblStart
@@ -229,18 +230,18 @@ partial class TripForm
         // 
         // dtpStartTime
         // 
+        dtpStartTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         dtpStartTime.Dock = DockStyle.Fill;
         dtpStartTime.Format = DateTimePickerFormat.Custom;
-        dtpStartTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         dtpStartTime.Location = new Point(123, 153);
         dtpStartTime.Name = "dtpStartTime";
-        dtpStartTime.Size = new Size(642, 23);
+        dtpStartTime.Size = new Size(642, 25);
         dtpStartTime.TabIndex = 11;
         // 
         // lblEnd
         // 
         lblEnd.Anchor = AnchorStyles.Left;
-        lblEnd.Location = new Point(3, 183);
+        lblEnd.Location = new Point(3, 188);
         lblEnd.Name = "lblEnd";
         lblEnd.Size = new Size(100, 23);
         lblEnd.TabIndex = 12;
@@ -248,12 +249,12 @@ partial class TripForm
         // 
         // dtpEndTime
         // 
+        dtpEndTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         dtpEndTime.Dock = DockStyle.Fill;
         dtpEndTime.Format = DateTimePickerFormat.Custom;
-        dtpEndTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         dtpEndTime.Location = new Point(123, 183);
         dtpEndTime.Name = "dtpEndTime";
-        dtpEndTime.Size = new Size(642, 23);
+        dtpEndTime.Size = new Size(642, 25);
         dtpEndTime.TabIndex = 13;
         // 
         // flowLayoutPanelButtons
@@ -271,85 +272,91 @@ partial class TripForm
         // 
         // btnAdd
         // 
-        this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-        this.btnAdd.FlatAppearance.BorderSize = 0;
-        this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnAdd.ForeColor = System.Drawing.Color.White;
-        this.btnAdd.Location = new System.Drawing.Point(665, 3);
-        this.btnAdd.Name = "btnAdd";
-        this.btnAdd.Size = new Size(100, 30);
-        this.btnAdd.TabIndex = 0;
-        this.btnAdd.Text = "SAVE";
-        this.btnAdd.UseVisualStyleBackColor = false;
+        btnAdd.BackColor = Color.FromArgb(51, 51, 76);
+        btnAdd.FlatAppearance.BorderSize = 0;
+        btnAdd.FlatStyle = FlatStyle.Flat;
+        btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnAdd.ForeColor = Color.White;
+        btnAdd.Location = new Point(665, 3);
+        btnAdd.Name = "btnAdd";
+        btnAdd.Size = new Size(100, 30);
+        btnAdd.TabIndex = 0;
+        btnAdd.Text = "SAVE";
+        btnAdd.UseVisualStyleBackColor = false;
         // 
         // btnUpdate
         // 
-        this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-        this.btnUpdate.FlatAppearance.BorderSize = 0;
-        this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnUpdate.ForeColor = System.Drawing.Color.White;
-        this.btnUpdate.Location = new System.Drawing.Point(559, 3);
-        this.btnUpdate.Name = "btnUpdate";
-        this.btnUpdate.Size = new System.Drawing.Size(100, 30);
-        this.btnUpdate.TabIndex = 1;
-        this.btnUpdate.Text = "UPDATE";
-        this.btnUpdate.UseVisualStyleBackColor = false;
+        btnUpdate.BackColor = Color.FromArgb(0, 150, 136);
+        btnUpdate.FlatAppearance.BorderSize = 0;
+        btnUpdate.FlatStyle = FlatStyle.Flat;
+        btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnUpdate.ForeColor = Color.White;
+        btnUpdate.Location = new Point(559, 3);
+        btnUpdate.Name = "btnUpdate";
+        btnUpdate.Size = new Size(100, 30);
+        btnUpdate.TabIndex = 1;
+        btnUpdate.Text = "UPDATE";
+        btnUpdate.UseVisualStyleBackColor = false;
         // 
         // btnDelete
         // 
-        this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-        this.btnDelete.FlatAppearance.BorderSize = 0;
-        this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnDelete.ForeColor = System.Drawing.Color.White;
-        this.btnDelete.Location = new System.Drawing.Point(453, 3);
-        this.btnDelete.Name = "btnDelete";
-        this.btnDelete.Size = new System.Drawing.Size(100, 30);
-        this.btnDelete.TabIndex = 2;
-        this.btnDelete.Text = "DELETE";
-        this.btnDelete.UseVisualStyleBackColor = false;
+        btnDelete.BackColor = Color.FromArgb(255, 82, 82);
+        btnDelete.FlatAppearance.BorderSize = 0;
+        btnDelete.FlatStyle = FlatStyle.Flat;
+        btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnDelete.ForeColor = Color.White;
+        btnDelete.Location = new Point(453, 3);
+        btnDelete.Name = "btnDelete";
+        btnDelete.Size = new Size(100, 30);
+        btnDelete.TabIndex = 2;
+        btnDelete.Text = "DELETE";
+        btnDelete.UseVisualStyleBackColor = false;
         // 
         // btnClear
         // 
-        this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-        this.btnClear.FlatAppearance.BorderSize = 0;
-        this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        this.btnClear.ForeColor = System.Drawing.Color.White;
-        this.btnClear.Location = new System.Drawing.Point(347, 3);
-        this.btnClear.Name = "btnClear";
-        this.btnClear.Size = new System.Drawing.Size(100, 30);
-        this.btnClear.TabIndex = 3;
-        this.btnClear.Text = "CLEAR";
-        this.btnClear.UseVisualStyleBackColor = false;
-
+        btnClear.BackColor = Color.FromArgb(158, 158, 158);
+        btnClear.FlatAppearance.BorderSize = 0;
+        btnClear.FlatStyle = FlatStyle.Flat;
+        btnClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnClear.ForeColor = Color.White;
+        btnClear.Location = new Point(347, 3);
+        btnClear.Name = "btnClear";
+        btnClear.Size = new Size(100, 30);
+        btnClear.TabIndex = 3;
+        btnClear.Text = "CLEAR";
+        btnClear.UseVisualStyleBackColor = false;
         // 
         // dgvTrips
         // 
-        this.dgvTrips.AllowUserToAddRows = false;
-        this.dgvTrips.AllowUserToDeleteRows = false;
-        this.dgvTrips.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-        this.dgvTrips.BackgroundColor = System.Drawing.Color.White;
-        this.dgvTrips.BorderStyle = System.Windows.Forms.BorderStyle.None;
-        this.dgvTrips.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvTrips.Dock = System.Windows.Forms.DockStyle.Fill;
-        this.dgvTrips.EnableHeadersVisualStyles = false;
-        this.dgvTrips.Location = new System.Drawing.Point(3, 323);
-        this.dgvTrips.MultiSelect = false;
-        this.dgvTrips.Name = "dgvTrips";
-        this.dgvTrips.ReadOnly = true;
-        this.dgvTrips.RowHeadersVisible = false;
-        this.dgvTrips.RowTemplate.Height = 35;
-        this.dgvTrips.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-        this.dgvTrips.Size = new Size(794, 184);
-        this.dgvTrips.TabIndex = 1;
-        this.dgvTrips.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(238, 239, 249);
-        this.dgvTrips.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-        this.dgvTrips.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(51, 51, 76);
-        this.dgvTrips.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-
+        dgvTrips.AllowUserToAddRows = false;
+        dgvTrips.AllowUserToDeleteRows = false;
+        dataGridViewCellStyle1.BackColor = Color.FromArgb(238, 239, 249);
+        dgvTrips.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+        dgvTrips.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvTrips.BackgroundColor = Color.White;
+        dgvTrips.BorderStyle = BorderStyle.None;
+        dgvTrips.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+        dgvTrips.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+        dataGridViewCellStyle2.BackColor = SystemColors.Window;
+        dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+        dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+        dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(51, 51, 76);
+        dataGridViewCellStyle2.SelectionForeColor = Color.White;
+        dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+        dgvTrips.DefaultCellStyle = dataGridViewCellStyle2;
+        dgvTrips.Dock = DockStyle.Fill;
+        dgvTrips.EnableHeadersVisualStyles = false;
+        dgvTrips.Location = new Point(3, 323);
+        dgvTrips.MultiSelect = false;
+        dgvTrips.Name = "dgvTrips";
+        dgvTrips.ReadOnly = true;
+        dgvTrips.RowHeadersVisible = false;
+        dgvTrips.RowTemplate.Height = 35;
+        dgvTrips.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        dgvTrips.Size = new Size(794, 174);
+        dgvTrips.TabIndex = 1;
+        dgvTrips.CellContentClick += dgvTrips_CellContentClick;
         // 
         // TripForm
         // 
@@ -369,7 +376,7 @@ partial class TripForm
         ResumeLayout(false);
     }
 
-#endregion
+    #endregion
 
     private System.Windows.Forms.TableLayoutPanel layoutPanelMain;
     private System.Windows.Forms.Panel panelInputs;
